@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SadConsole</id>
+    <version>6.2.1</version>
+    <title>SadConsole for MonoGame</title>
+    <authors>SadLogic</authors>
+    <owners>Thraka</owners>
+    <licenseUrl>https://github.com/Thraka/SadConsole/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/Thraka/SadConsole</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Thraka/SadConsole/gh-pages/images/oD8yyro5.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A MonoGame library that emulates old-school console and command prompt style graphics. Use the SadConsole.Starter package for new projects.</description>
+    <releaseNotes>
+- LayeredSurface and SurfaceView did not reset the RenderTexture when font changed.
+- LayeredSurface deserializes the render view correctly now.
+- Scene did not serialize correctly.
+- GameObject did not recalculate position when PositionOffset was changed.
+- New NoDrawSurface added. Does not use LastRenderResult.
+- Normal surfaces dispose of LastRenderResult in the destructor.
+    </releaseNotes>
+    <copyright>Copyright 2017 Steve De George JR</copyright>
+    <tags>monogame roguelike cli xna game development console ansi ascii</tags>
+  </metadata>
+  <files>
+
+    <!-- Cross-platform reference assemblies -->
+    <file src="..\src\SadConsole\bin\Release\SadConsole.dll" target="lib\net" />
+    <file src="..\src\SadConsole\bin\Release\SadConsole.pdb" target="lib\net" />
+    <file src="..\src\SadConsole\bin\Release\SadConsole.xml" target="lib\net" />
+
+    <!-- UWP reference assemblies -->
+    <file src="..\src\SadConsole.Universal\bin\Release\SadConsole.dll" target="lib\UAP10" />
+    <file src="..\src\SadConsole.Universal\bin\Release\SadConsole.pdb" target="lib\UAP10" />
+    <file src="..\src\SadConsole.Universal\bin\Release\SadConsole.xml" target="lib\UAP10" />
+
+    <!-- Source code -->
+    <file src="..\src\SadConsole.Shared\**\*.cs" target="src" />
+
+  </files>
+</package>
